@@ -1,4 +1,24 @@
 <?php
+function updatesp($id, $tensp, $img, $gia, $iddm)
+{
+    $conn = connectdb();
+    if ($img == "") {
+        $sql = "UPDATE tbl_sanpham SET tensp='$tensp', gia='$gia', iddm='$iddm' WHERE id=" . $id;
+    } else {
+        $sql = "UPDATE tbl_sanpham SET tensp='$tensp', gia='$gia', iddm='$iddm', img='$img' WHERE id=" . $id;
+    }
+    // execute the query
+    $conn->exec($sql);
+}
+function getonesp($id)
+{
+    $conn = connectdb();
+    $stmt = $conn->prepare("SELECT * FROM tbl_sanpham WHERE id=" . $id);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $kq = $stmt->fetchAll();
+    return $kq;
+}
 function delsp($id)
 {
     $conn = connectdb();

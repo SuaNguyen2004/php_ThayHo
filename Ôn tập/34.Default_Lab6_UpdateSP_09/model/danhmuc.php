@@ -1,5 +1,5 @@
 <?php
-function updatedm($id, $tendm)
+function insertdm($id, $tendm)
 {
     $conn = connectdb();
     $sql = "UPDATE tbl_danhmuc SET tendm='$tendm' WHERE id=" . $id;

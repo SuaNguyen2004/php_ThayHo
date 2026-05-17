@@ -30,7 +30,7 @@ if (isset($_GET['act'])) {
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $id = $_POST['id'];
                 $tendm = $_POST['tendm'];
-                updatedm($id, $tendm);
+                insertdm($id, $tendm);
                 //
                 $kq = getall_dm();
                 include "view/danhmuc.php";
@@ -55,55 +55,6 @@ if (isset($_GET['act'])) {
         case 'sanpham':
             // load dsdm
             $dsdm = getall_dm();
-            // load dssp
-            $kq = getall_sanpham();
-            include "view/sanpham.php";
-            break;
-        case 'updatespform':
-            // load dsdm
-            $dsdm = getall_dm();
-            // sp chi tiet theo id
-            if (isset($_GET['id']) && ($_GET['id']) > 0) {
-                $spct = getonesp($_GET['id']);
-            }
-            // load dssp
-            $kq = getall_sanpham();
-            include "view/updatespform.php";
-            break;
-        case 'sanpham_update':
-            // load dsdm
-            $dsdm = getall_dm();
-            // cap nhat sp
-            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                $iddm = $_POST['iddm'];
-                $tensp = $_POST['tensp'];
-                $gia = $_POST['gia'];
-                $id = $_POST['id'];
-
-                if ($_FILES["hinh"]["name"] != "") {
-                    $target_dir = "../uploads/";
-                    $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
-                    $img = $target_file;
-                    $uploadOk = 1;
-                    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-                    // Allow certain file formats
-                    if (
-                        $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-                        && $imageFileType != "gif"
-                    ) {
-                        // echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-                        $uploadOk = 0;
-                    }
-
-                    if ($uploadOk == 1) {
-                        move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file);
-                        // insert_sanpham($iddm, $tensp, $gia, $img);
-                    }
-                } else {
-                    $img = "";
-                }
-                updatesp($id, $tensp, $img, $gia, $iddm);
-            }
             // load dssp
             $kq = getall_sanpham();
             include "view/sanpham.php";

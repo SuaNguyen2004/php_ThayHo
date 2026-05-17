@@ -44,7 +44,7 @@
                         <td>' . $item['tensp'] . '</td>
                         <td><img src="' . $item['img'] . '" width="80px"></td>
                         <td>' . $item['gia'] . '</td>
-                        <td><a href="index.php?act=updatespform&id=' . $item['id'] . '">Sửa</a> | <a href="index.php?act=delsp&id=' . $item['id'] . '">Xoá</a></td>
+                        <td><a href="#">Sửa</a> | <a href="index.php?act=delsp&id=' . $item['id'] . '">Xoá</a></td>
                     </tr>';
                 $i++;
             }
