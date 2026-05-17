@@ -1,0 +1,3 @@
+<div class="main">
+    <h2>HOME</h2>
+</div>

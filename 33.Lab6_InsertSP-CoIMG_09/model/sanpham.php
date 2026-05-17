@@ -1,0 +1,18 @@
+<?php
+function insert_sanpham($iddm, $tensp, $gia, $img)
+{
+    $conn = connectdb();
+    $sql = "INSERT INTO tbl_sanpham (iddm, tensp, gia, img) VALUES ('$iddm', '$tensp', '$gia', '$img')";
+    $conn->exec($sql);
+}
+function getall_sanpham()
+{
+    $conn = connectdb();
+    $stmt = $conn->prepare("SELECT * FROM tbl_sanpham");
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $kq = $stmt->fetchAll();
+    return $kq;
+}
+
+?>

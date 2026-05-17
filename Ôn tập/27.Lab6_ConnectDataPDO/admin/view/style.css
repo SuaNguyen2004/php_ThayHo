@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+header {
+  float: left;
+  width: 100%;
+  background-color: #ccc;
+  margin-bottom: 5px;
+  padding: 20px;
+}
+
+footer {
+  float: left;
+  width: 100%;
+  background-color: #ccc;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.main {
+  float: left;
+  width: calc(100% -100px);
+  padding: 0px 50px;
+}
+
+th {
+  background-color: #ccc;
+}
+
+table {
+  width: 100%;
+  border: 1px solid gray;
+}
+
+th,
+td {
+  padding: 10px 20px;
+  border: 1px solid gray;
+}

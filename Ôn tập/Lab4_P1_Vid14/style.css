@@ -1,0 +1,16 @@
+.boxcenter {
+  height: 500px;
+  /* background-color: pink; */
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.boxsp {
+  width: 20%;
+  text-align: center;
+  margin: auto 0;
+}
+.boxsp img {
+  width: 75%;
+}
