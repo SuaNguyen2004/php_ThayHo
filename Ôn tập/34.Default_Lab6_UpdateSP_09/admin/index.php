@@ -30,7 +30,7 @@ if (isset($_GET['act'])) {
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $id = $_POST['id'];
                 $tendm = $_POST['tendm'];
-                insertdm($id, $tendm);
+                updatedm($id, $tendm);
                 //
                 $kq = getall_dm();
                 include "view/danhmuc.php";
