@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* float: left; */
+  background: #ccc;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+footer {
+  /* float: left; */
+  background: #ccc;
+  width: 100%;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.main {
+  /* float: left; */
+  /* background: pink; */
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #999;
+}
+
+th,
+td {
+  padding: 11px;
+  border: 1px solid black;
+}
