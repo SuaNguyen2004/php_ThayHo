@@ -16,7 +16,8 @@
 
                 <label for="psw">Password</label><br>
                 <input type="password" placeholder="Enter Password" name="pass" value="" required>
-                <button type="submit">Login</button>
+                <br>
+                <input type="submit" name="register" value="Đăng ký">
             </div>
 
         </form>
