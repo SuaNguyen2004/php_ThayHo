@@ -16,7 +16,7 @@ switch ($_GET['act']) {
         header('location: index.php');
         break;
     case 'login':
-        if (isset($_POST['login']) && isset($_POST['login'])) {
+        if (isset($_POST['login']) && ($_POST['login'])) {
             $user = $_POST['user'];
             $pass = $_POST['pass'];
             $kq = getuserinfo($user, $pass);
