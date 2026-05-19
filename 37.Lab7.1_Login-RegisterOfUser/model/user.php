@@ -40,7 +40,15 @@ function checkuser($user, $pass)
     } else {
         return 0;
     }
-
+}
+function getuserinfo($user, $pass)
+{
+    $conn = connectdb();
+    $stmt = $conn->prepare("SELECT * FROM tbl_user WHERE user = '" . $user . "' AND pass = '" . $pass . "'");
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $kq = $stmt->fetchAll();
+    return $kq;
 }
 
 ?>

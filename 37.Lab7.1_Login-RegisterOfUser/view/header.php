@@ -54,8 +54,15 @@
                         <a href="index.php?act=about">About us<i class="fas fa-chevron-down"></i></a>
                     </li>
                     <li><a href="#">Contact us</a></li>
-                    <li><a href="index.php?act=dangky">Đăng ký</a></li>
-                    <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
+                    <?php
+                    if (isset($_SESSION['username']) && ($_SESSION['username'] != "")) {
+                        echo '<li><a href="index.php?act=userinfo">' . $_SESSION['username'] . '</a></li>';
+                        echo '<li><a href="index.php?act=thoat">Thoát</a></li>';
+                    } else {
+                        ?>
+                        <li><a href="index.php?act=dangky">Đăng ký</a></li>
+                        <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>
