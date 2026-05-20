@@ -33,123 +33,23 @@
 
 <div class="content_2">
     <div class="list-product">
-        <div class="column">
-            <div class="product">
-                <div class="sale">Sale!</div>
-                <img class="img-product" src="./view/image/cake1.jpg" alt="" />
-                <div class="price">
-                    <span> <del>$65.00</del>$55.00 </span>
-                </div>
-                <div class="infor-product">
-                    <p>Custom Cake Builder</p>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="product">
-                <div class="sale">Sale!</div>
-                <img class="img-product" src="./view/image/cake2.jpg" alt="" />
-                <div class="price">
-                    <span> <del>$65.00</del>$55.00 </span>
-                </div>
-                <div class="infor-product">
-                    <p>Custom Cake Builder</p>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="product">
-                <div class="sale">Sale!</div>
-                <img class="img-product" src="./view/image/cake3.jpg" alt="" />
-                <div class="price">
-                    <span> <del>$65.00</del>$55.00 </span>
-                </div>
-                <div class="infor-product">
-                    <p>Custom Cake Builder</p>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="product">
-                <div class="sale">Sale!</div>
-                <img class="img-product" src="./view/image/cake4.jpg" alt="" />
-                <div class="price">
-                    <span> <del>$65.00</del>$55.00 </span>
-                </div>
-                <div class="infor-product">
-                    <p>Custom Cake Builder</p>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="product">
-                <div class="sale">Sale!</div>
-                <img class="img-product" src="./view/image/cake1.jpg" alt="" />
-                <div class="price">
-                    <span> <del>$65.00</del>$55.00 </span>
-                </div>
-                <div class="infor-product">
-                    <p>Custom Cake Builder</p>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="product">
-                <div class="sale">Sale!</div>
-                <img class="img-product" src="./view/image/cake1.jpg" alt="" />
-                <div class="price">
-                    <span> <del>$65.00</del>$55.00 </span>
-                </div>
-                <div class="infor-product">
-                    <p>Custom Cake Builder</p>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="product">
-                <div class="sale">Sale!</div>
-                <img class="img-product" src="./view/image/cake1.jpg" alt="" />
-                <div class="price">
-                    <span> <del>$65.00</del>$55.00 </span>
-                </div>
-                <div class="infor-product">
-                    <p>Custom Cake Builder</p>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="product">
-                <div class="sale">Sale!</div>
-                <img class="img-product" src="./view/image/cake4.jpg" alt="" />
-                <div class="price">
-                    <span> <del>$65.00</del>$55.00 </span>
-                </div>
-                <div class="infor-product">
-                    <p>Custom Cake Builder</p>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </div>
+        <?php
+        showpro($sphome1);
+        ?>
     </div>
 </div>
 <div class="special">
-    <div class="special-img"><img src="./view/image/recipe-1.png" alt="" /></div>
+    <?php
+    echo '<div class="special-img"><img src="./uploads/' . $spdacbiet[0]['img'] . '"width = 400px alt="" /></div>
     <div class="infor-recipe">
-        <h2>Special Recipe</h2>
+        <h2>' . $spdacbiet[0]['tensp'] . '</h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quod id quis
-            dolore non possimus quae earum nihil reiciendis alias harum molestias eos
-            totam voluptates nobis dolores, minima obcaecati quaerat.
+            ' . $spdacbiet[0]['mota'] . '
         </p>
         <button>View Details</button>
-    </div>
+    </div>';
+    ?>
+
 </div>
 <div class="main-services">
     <h2>Main Services We Provide</h2>
@@ -159,7 +59,7 @@
             <h3>Celebration Cakes</h3>
             <p>We offten huge variety of Celebration Cakes. Check out our collection</p>
         </div>
-        <div class="item2">
+        <div cla ss="item2">
             <i class="fas fa-cookie-bite"></i>
             <h3>Wedding Cakes</h3>
             <p>

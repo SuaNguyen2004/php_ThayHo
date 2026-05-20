@@ -8,6 +8,8 @@ include 'model/sanpham.php';
 include 'model/user.php';
 
 $dsdm = getall_dm();
+$sphome1 = getall_sanpham(0, "");
+$spdacbiet = get_product_special();
 include 'view/header.php';
 
 switch ($_GET['act']) {
@@ -18,6 +20,7 @@ switch ($_GET['act']) {
         if (isset($_GET['id']) && ($_GET['id'] > 0)) {
             $id = $_GET['id'];
         }
+        $dssp = getall_sanpham($id, "");
         include 'view/product.php';
         break;
     case 'dangnhap':
