@@ -5,10 +5,6 @@
 <h2><?php echo $id; ?></h2>
 
 <div class="content_1">
-    <div>
-        <h3>Our Featured Cakes __</h3>
-        <p>Seldolor sit amet consect etur</p>
-    </div>
     <div class="list-product">
         <div class="column">
             <div class="product">
