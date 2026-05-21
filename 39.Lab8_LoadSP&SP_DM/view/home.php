@@ -6,211 +6,46 @@
 </div>
 <section class="about py-md-5 py-5">
     <div class="container-fluid">
-        <div class="feature-grids row px-3">
-
-            <!-- <div class="col-lg-3 gd-bottom">
-                    <div class="bottom-gd row">
-                        <div class="icon-gd col-md-3 text-center"><span class="fa fa-truck" aria-hidden="true"></span></div>
-                        <div class="icon-gd-info col-md-9">
-                            <h3 class="mb-2">Miễn phí giao hàng</h3>
-                            <p>Đối với tất cả các đơn đặt hàng trên $ 2000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 gd-bottom">
-                    <div class="bottom-gd row bottom-gd2-active">
-                        <div class="icon-gd col-md-3 text-center"><span class="fa fa-bullhorn" aria-hidden="true"></span></div>
-                        <div class="icon-gd-info col-md-9">
-                            <h3 class="mb-2">Hoàn trả</h3>
-                            <p>30 ngày đổi trả</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 gd-bottom">
-                    <div class="bottom-gd row">
-                        <div class="icon-gd col-md-3 text-center"> <span class="fa fa-gift" aria-hidden="true"></span></div>
-
-                        <div class="icon-gd-info col-md-9">
-                            <h3 class="mb-2">Giả giá thành viên </h3>
-                            <p>Đăng ký và tiết kiệm lên đến $ 29%</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-3 gd-bottom">
-                    <div class="bottom-gd row">
-                        <div class="icon-gd col-md-3 text-center"> <span class="fa fa-usd" aria-hidden="true"></span></div>
-                        <div class="icon-gd-info col-md-9">
-                            <h3 class="mb-2">Hỗ trộ</h3>
-                            <p>Hỗ trợ 24/22</p>
-                        </div>
-                    </div>
-                </div> -->
-        </div>
+        <div class="feature-grids row px-3"></div>
     </div>
 </section>
 <!-- //ab -->
 <!--/ab -->
+
 <section class="about py-5">
     <div class="container pb-lg-3">
         <h3 class="tittle text-center">Sản phẩm mới</h3>
         <div class="row">
-            <div class="col-md-4 product-men">
-                <div class="product-shoe-info shoe text-center">
-                    <div class="men-thumb-item">
-                        <img src="./web/images/s1.jpg" class="img-fluid" alt="">
-                        <span class="product-new-top">New</span>
-                    </div>
-                    <div class="item-info-product">
-                        <h4>
-                            <a href="shop-single.html">Bella Toes </a>
-                        </h4>
+            <?php
+            foreach ($sphome1 as $sp) {
+                echo '<div class="col-md-4 product-men">
+                        <div class="product-shoe-info shoe text-center">
+                            <div class="men-thumb-item">
+                                <img src="./uploads/' . $sp['img'] . '" class="img-fluid" alt="">
+                                <span class="product-new-top">New</span>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a href="shop-single.html">' . $sp['tensp'] . '</a>
+                                </h4>
 
-                        <div class="product_price">
-                            <div class="grid-price">
-                                <span class="money">$675.00</span>
+                                <div class="product_price">
+                                    <div class="grid-price">
+                                        <span class="money">$' . $sp['gia'] . '</span>
+                                    </div>
+                                </div>
+                                <ul class="stars">
+                                    <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
+                                </ul>
                             </div>
                         </div>
-                        <ul class="stars">
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 product-men">
-                <div class="product-shoe-info shoe text-center">
-                    <div class="men-thumb-item">
-                        <img src="./web/images/s2.jpg" class="img-fluid" alt="">
-                        <span class="product-new-top">New</span>
-                    </div>
-                    <div class="item-info-product">
-                        <h4>
-                            <a href="shop-single.html">Chikku Loafers </a>
-                        </h4>
-
-                        <div class="product_price">
-                            <div class="grid-price">
-                                <span class="money">$475.00</span>
-                            </div>
-                        </div>
-                        <ul class="stars">
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 product-men">
-                <div class="product-shoe-info shoe text-center">
-                    <div class="men-thumb-item">
-                        <img src="./web/images/s3.jpg" class="img-fluid" alt="">
-                        <span class="product-new-top">New</span>
-                    </div>
-                    <div class="item-info-product">
-                        <h4>
-                            <a href="shop-single.html">(SRV) Sneakers </a>
-                        </h4>
-
-                        <div class="product_price">
-                            <div class="grid-price">
-                                <span class="money">$575.00</span>
-                            </div>
-                        </div>
-                        <ul class="stars">
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 product-men my-lg-4">
-                <div class="product-shoe-info shoe text-center">
-                    <div class="men-thumb-item">
-                        <img src="./web/images/s4.jpg" class="img-fluid" alt="">
-                        <span class="product-new-top">New</span>
-                    </div>
-                    <div class="item-info-product">
-                        <h4>
-                            <a href="shop-single.html">Shuberry Heels</a>
-                        </h4>
-
-                        <div class="product_price">
-                            <div class="grid-price">
-                                <span class="money">$575.00</span>
-                            </div>
-                        </div>
-                        <ul class="stars">
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 product-men my-lg-4">
-                <div class="product-shoe-info shoe text-center">
-                    <div class="men-thumb-item">
-                        <img src="./web/images/s5.jpg" class="img-fluid" alt="">
-                        <span class="product-new-top">New</span>
-                    </div>
-                    <div class="item-info-product">
-                        <h4>
-                            <a href="shop-single.html">Red Bellies </a>
-                        </h4>
-
-                        <div class="product_price">
-                            <div class="grid-price">
-                                <span class="money">$575.00</span>
-                            </div>
-                        </div>
-                        <ul class="stars">
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 product-men my-lg-4">
-                <div class="product-shoe-info shoe text-center">
-                    <div class="men-thumb-item">
-                        <img src="./web/images/s6.jpg" class="img-fluid" alt="">
-                        <span class="product-new-top">New</span>
-                    </div>
-                    <div class="item-info-product">
-                        <h4>
-                            <a href="shop-single.html">Catwalk Flats </a>
-                        </h4>
-
-                        <div class="product_price">
-                            <div class="grid-price">
-                                <span class="money">$575.00</span>
-                            </div>
-                        </div>
-                        <ul class="stars">
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>
-                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                    </div>';
+            }
+            ?>
         </div>
 
     </div>
@@ -257,29 +92,35 @@
     <div class="container pb-lg-3">
         <h3 class="tittle text-center">Popular Products</h3>
         <div class="row">
-            <div class="col-md-6 latest-left">
+            <?php
+            echo '<div class="col-md-6 latest-left">
                 <div class="product-shoe-info shoe text-center">
-                    <img src="./web/images/img1.jpg" class="img-fluid" alt="">
-                    <div class="shop-now"><a href="shop.html" class="btn">Shop Now</a></div>
+                    <img src="./uploads/' . $sphome2[0]['img'] . '" class="img-fluid" alt="">
+                    <div class="shop-now"><a href="#" class="btn">' . $sphome2[0]['tensp'] . '</a></div>
                 </div>
-            </div>
+            </div>';
+            ?>
             <div class="col-md-6 latest-right">
                 <div class="row latest-grids">
                     <div class="latest-grid1 product-men col-12">
-                        <div class="product-shoe-info shoe text-center">
+                        <?php
+                        echo '<div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
-                                <img src="./web/images/img2.jpg" class="img-fluid" alt="">
-                                <div class="shop-now"><a href="shop.html" class="btn">Shop Now</a></div>
+                                <img src="./uploads/' . $sphome2[1]['img'] . '" class="img-fluid" alt="">
+                                <div class="shop-now"><a href="shop.html" class="btn">' . $sphome2[1]['tensp'] . '</a></div>
                             </div>
-                        </div>
+                        </div>';
+                        ?>
                     </div>
                     <div class="latest-grid2 product-men col-12 mt-lg-4">
-                        <div class="product-shoe-info shoe text-center">
+                        <?php
+                        echo '<div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
-                                <img src="./web/images/img3.jpg" class="img-fluid" alt="">
-                                <div class="shop-now"><a href="shop.html" class="btn">Shop Now</a></div>
+                                <img src="./uploads/' . $sphome2[2]['img'] . '" class="img-fluid" alt="">
+                                <div class="shop-now"><a href="shop.html" class="btn">' . $sphome2[2]['tensp'] . '</a></div>
                             </div>
-                        </div>
+                        </div>';
+                        ?>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,12 @@
 session_start();
 // load du lieu trang chu
 
+$banner_clss = "inner-banner";
+if (!isset($_GET['act'])) {
+    $banner_clss = "main-banner";
+} elseif (isset($_GET['act']) && (($_GET['act'] == "") || ($_GET['act'] == "home"))) {
+    $banner_clss = "main-banner";
+}
 include 'view/header.php';
 if (isset($_GET['act'])) {
     switch ($_GET['act']) {
