@@ -83,6 +83,11 @@ if (isset($_GET['act'])) {
             header('location: index.php');
             break;
         case 'sanphamct':
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                $id = $_GET['id'];
+                $kq = getonesp($id);
+
+            }
             include 'view/sanphamct.php';
             break;
         case 'viewcart':
