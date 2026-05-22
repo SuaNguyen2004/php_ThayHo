@@ -31,17 +31,17 @@
                         $tt = $item['3'] * $item['4'];
                         $tong += $tt;
                         echo '<tr>
-                                <td>' . ($i + 1) . '</td>
-                                <td>' . $item['1'] . '</td>
-                                <td>' . $item['2'] . '</td>
-                                <td>' . $item['3'] . '</td>
-                                <td>' . $item['4'] . '</td>
-                                <td>' . $tt . '</td>
-                                <td><a href="index.php?act=delcart&i=' . $i . '">Xoá</a></td>
+                                <td class="td">' . ($i + 1) . '</td>
+                                <td class="td">' . $item['1'] . '</td>
+                                <td class="td"><img src="./uploads/' . $item['2'] . '"</td>
+                                <td class="td">' . $item['3'] . '</td>
+                                <td class="td">' . $item['4'] . '</td>
+                                <td class="td">' . $tt . '</td>
+                                <td class="td"><a href="index.php?act=delcart&i=' . $i . '">Xoá</a></td>
                             </tr>';
                         $i++;
                     }
-                    echo '<tr><td colspan="5"></td><td>$' . $tong . '</td><td></td></tr>';
+                    echo '<tr style="background-color: whitesmoke"><td colspan="5"  class="td"></td><td  class="td">$' . $tong . '</td><td  class="td"></td></tr>';
 
                     echo '</table>';
                 }
@@ -53,7 +53,33 @@
             </div>
             <div class="col-md-6 contact-left-content">
                 <!-- right -->
+                <h3>THÔNG TIN ĐẶT HÀNG</h3>
 
+                <table class="dathang">
+                    <tr>
+                        <td><input type="text" name="hoten" placeholder="Nhập họ tên"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="address" placeholder="Nhập địa chỉ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="email" placeholder="Nhập email"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="tel" placeholder="Nhập sđt"></td>
+                    </tr>
+                    <tr>
+                        <td>Phương thức thanh toán<br>
+                            <input type="radio" name="pttt" value="1"> Thanh toán khi nhận hàng<br>
+                            <input type="radio" name="pttt" value="2"> Thanh toán chuyển khoản<br>
+                            <input type="radio" name="pttt" value="3"> Thanh toán ví MoMo<br>
+                            <input type="radio" name="pttt" value="4"> Thanh toán Online<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Thanh toán"></td>
+                    </tr>
+                </table>
             </div>
 
         </div>

@@ -6,9 +6,10 @@
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
-    <meta name="keywords" content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta name="keywords"
+        content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script>
-        addEventListener("load", function() {
+        addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);
 
@@ -28,15 +29,17 @@
     <!-- //font-awesome-icons -->
     <!-- /Fonts -->
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
+        rel="stylesheet">
     <!-- //Fonts -->
+    <link rel="stylesheet" href="./web/css/mystyle.css">
 
 </head>
 
 <body>
 
     <!-- mian-content -->
-    <div class="<?=$banner_clss?>" id="home">
+    <div class="<?= $banner_clss ?>" id="home">
         <!-- header -->
         <header class="header">
             <div class="container-fluid px-lg-5">
@@ -51,8 +54,8 @@
                     <ul class="menu mt-2">
                         <li class="active"><a href="index.php">Trang chủ</a></li>
                         <li><a href="index.php?act=about">Giới thiệu</a></li>
-                        <li><a href="index.php?act=sanpham">Sản phẩm</a></li>                        
-                        <li><a href="index.php?act=sanphamct">Sản phẩm chi tiết</a></li>                        
+                        <li><a href="index.php?act=sanpham">Sản phẩm</a></li>
+                        <!-- <li><a href="index.php?act=sanphamct">Sản phẩm chi tiết</a></li>                         -->
                         <li><a href="index.php?act=lienhe">Liên hệ</a></li>
                         <li><a href="index.php?act=viewcart">Giỏ hàng</a></li>
                     </ul>
@@ -60,7 +63,7 @@
                 <!-- //nav -->
             </div>
         </header>
-        
+
         <!--// banner-inner -->
 
     </div>
