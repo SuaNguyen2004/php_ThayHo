@@ -41,7 +41,7 @@
                             </tr>';
                         $i++;
                     }
-                    echo '<tr style="background-color: whitesmoke"><td colspan="5"  class="td">Tổng giá trị đơn hàng</td><td  class="td">$' . $tong . '</td><td  class="td"></td></tr>';
+                    echo '<tr style="background-color: whitesmoke"><td colspan="5"  class="td"></td><td  class="td">$' . $tong . '</td><td  class="td"></td></tr>';
 
                     echo '</table>';
                 }
@@ -54,34 +54,32 @@
             <div class="col-md-6 contact-left-content">
                 <!-- right -->
                 <h3>THÔNG TIN ĐẶT HÀNG</h3>
-                <form action="index.php?act=thanhtoan" method="post">
-                    <input type="hidden" name="tongdonhang" value="<?= $tong ?>">
-                    <table class="dathang">
-                        <tr>
-                            <td><input type="text" name="hoten" placeholder="Nhập họ tên"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="address" placeholder="Nhập địa chỉ"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="email" placeholder="Nhập email"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="tel" placeholder="Nhập sđt"></td>
-                        </tr>
-                        <tr>
-                            <td>Phương thức thanh toán<br>
-                                <input type="radio" name="pttt" value="1"> Thanh toán khi nhận hàng<br>
-                                <input type="radio" name="pttt" value="2"> Thanh toán chuyển khoản<br>
-                                <input type="radio" name="pttt" value="3"> Thanh toán ví MoMo<br>
-                                <input type="radio" name="pttt" value="4"> Thanh toán Online<br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="submit" value="Thanh toán" name="thanhtoan"></td>
-                        </tr>
-                    </table>
-                </form>
+
+                <table class="dathang">
+                    <tr>
+                        <td><input type="text" name="hoten" placeholder="Nhập họ tên"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="address" placeholder="Nhập địa chỉ"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="email" placeholder="Nhập email"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="tel" placeholder="Nhập sđt"></td>
+                    </tr>
+                    <tr>
+                        <td>Phương thức thanh toán<br>
+                            <input type="radio" name="pttt" value="1"> Thanh toán khi nhận hàng<br>
+                            <input type="radio" name="pttt" value="2"> Thanh toán chuyển khoản<br>
+                            <input type="radio" name="pttt" value="3"> Thanh toán ví MoMo<br>
+                            <input type="radio" name="pttt" value="4"> Thanh toán Online<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Thanh toán"></td>
+                    </tr>
+                </table>
             </div>
 
         </div>

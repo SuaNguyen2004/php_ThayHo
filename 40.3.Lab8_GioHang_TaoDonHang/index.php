@@ -6,7 +6,6 @@ if (!isset($_SESSION['giohang']))
 include "model/connectdb.php";
 include "model/danhmuc.php";
 include "model/sanpham.php";
-include "model/donhang.php";
 
 //load du lieu trang chu
 $sphome1 = getall_sp(0, 0);
@@ -100,23 +99,6 @@ if (isset($_GET['act'])) {
 
             }
             include 'view/sanphamct.php';
-            break;
-        case 'thanhtoan':
-            if (isset($_POST['thanhtoan']) && $_POST['thanhtoan']) {
-                //lấy dữ liệu
-                $tongdonhang = $_POST['tongdonhang'];
-                $hoten = $_POST['hoten'];
-                $address = $_POST['address'];
-                $email = $_POST['email'];
-                $tel = $_POST['tel'];
-                $pttt = $_POST['pttt'];
-                $madh = "BAHOZONE" . rand(0, 999999);
-                // tạo đơn hàng
-                // và trả về 1 id đơn hàng
-                $iddh = taodonhang($madh, $tongdonhang, $pttt, $hoten, $address, $email, $tel);
-
-            }
-            include 'view/donhang.php';
             break;
         case 'viewcart':
             include 'view/viewcart.php';
