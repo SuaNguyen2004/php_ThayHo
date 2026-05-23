@@ -40,13 +40,14 @@
                                 <td class="td">' . $tt . '</td>
                             </tr>';
                             $i++;
-                        }
-                        echo '<tr style="background-color: whitesmoke"><td colspan="5"  class="td">Tổng giá trị đơn hàng</td><td  class="td">$' . $tong . '</td></tr>';
 
-                        echo '</table>';
+                            echo '<tr style="background-color: whitesmoke"><td colspan="5"  class="td">Tổng giá trị đơn hàng</td><td  class="td">$' . $tong . '</td></tr>';
+
+                            echo '</table>';
+                        }
+                    } else {
+                        echo 'Giỏ hàng rỗng. <a href="index.php">Tiếp tục đặt hàng</a> ';
                     }
-                } else {
-                    echo 'Giỏ hàng rỗng. <a href="index.php">Tiếp tục đặt hàng</a> ';
                 }
                 ?>
 
