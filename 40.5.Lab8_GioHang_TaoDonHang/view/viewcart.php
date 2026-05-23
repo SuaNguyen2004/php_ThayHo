@@ -32,10 +32,10 @@
                         $tong += $tt;
                         echo '<tr>
                                 <td class="td">' . ($i + 1) . '</td>
-                                <td class="td">' . $item['1'] . '</td>
-                                <td class="td"><img src="./uploads/' . $item['2'] . '"</td>
-                                <td class="td">' . $item['3'] . '</td>
-                                <td class="td">' . $item['4'] . '</td>
+                                <td class="td">' . $item[1] . '</td>
+                                <td class="td"><img src="./uploads/' . $item[2] . '"</td>
+                                <td class="td">' . $item[3] . '</td>
+                                <td class="td">' . $item[4] . '</td>
                                 <td class="td">' . $tt . '</td>
                                 <td class="td"><a href="index.php?act=delcart&i=' . $i . '">Xoá</a></td>
                             </tr>';
