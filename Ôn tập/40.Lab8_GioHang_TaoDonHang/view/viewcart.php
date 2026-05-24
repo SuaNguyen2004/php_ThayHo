@@ -1,4 +1,12 @@
 <!---->
+<style>
+    .td {
+        border: 1px solid grey;
+        padding: 0px 10px !important;
+    }
+</style>
+
+
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
         <a href="index.html">Home</a>
@@ -57,7 +65,25 @@
             </div>
             <div class="col-md-6 contact-left-content">
                 <!-- right -->
+                <h3>THÔNG TIN ĐẶT HÀNG</h3>
+                <table>
 
+                    <form action="index.php?act=donhang" method="post">
+                        <input type="hidden" name="tongdonhang" value="<?= $tong ?>">
+                        <tr><input type="text" name="hoten" placeholder="Điền họ tên"></tr><br>
+                        <tr><input type="text" name="address" placeholder="Điền địa chỉ"></tr><br>
+                        <tr><input type="text" name="email" placeholder="Điền email"></tr><br>
+                        <tr><input type="text" name="tel" placeholder="Điền số điện thoại"></tr><br>
+                        <tr>
+                            <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+                        </tr>
+                        <tr><input type="radio" name="pttt" value="1">Thanh toán khi nhận hàng</tr><br>
+                        <tr><input type="radio" name="pttt" value="2">Thanh toán Chuyển khoản</tr><br>
+                        <tr><input type="radio" name="pttt" value="3">Thanh toán Online</tr><br>
+                        <tr><input type="radio" name="pttt" value="4">Thanh toán Ví MoMo</tr><br>
+                        <tr><input type="submit" value="Thanh toán" name="thanhtoan"></tr>
+                    </form>
+                </table>
             </div>
 
         </div>

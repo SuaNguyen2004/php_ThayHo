@@ -6,6 +6,7 @@ if (!isset($_SESSION['giohang'])) {
 include "model/connectdb.php";
 include "model/danhmuc.php";
 include "model/sanpham.php";
+include "model/donhang.php";
 
 
 //load du lieu trang chu
@@ -36,6 +37,27 @@ if (isset($_GET['act'])) {
             break;
         case 'lienhe':
             include 'view/lienhe.php';
+            break;
+        case 'donhang':
+            if (isset($_POST['thanhtoan']) && $_POST['thanhtoan']) {
+                $tongdonhang = $_POST['tongdonhang'];
+                $hoten = $_POST['hoten'];
+                $address = $_POST['address'];
+                $email = $_POST['email'];
+                $tel = $_POST['tel'];
+                $pttt = $_POST['pttt'];
+                $madh = "#MNM" . rand(0, 999999);
+
+                $iddh = taodonhang($madh, $tongdonhang, $pttt, $hoten, $address, $email, $tel);
+                $_SESSION['iddh'] = $iddh;
+                if (isset($_SESSION['giohang']) && count($_SESSION['giohang']) > 0) {
+                    foreach ($_SESSION['giohang'] as $i) {
+                        addtocart($iddh, $i[0], $i[1], $i[2], $i[3], $i[4]);
+                    }
+                    unset($_SESSION['giohang']);
+                }
+            }
+            include 'view/donhang.php';
             break;
         case 'delcart':
             if (isset($_SESSION['giohang']) && $_SESSION['giohang'] > 0) {
